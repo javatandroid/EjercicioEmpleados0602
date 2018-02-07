@@ -84,9 +84,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    public void clickCalcular(View view){
+    public void clickCalcular(View view) {
+        String cajaSueldo = etSueldo.getText().toString();
+        double sueldo = Double.parseDouble(cajaSueldo);
 
+        String cajaPrima = etPrima.getText().toString();
+        int prima = Integer.parseInt(cajaPrima);
+
+        double total = sueldo + prima;
+
+        etTotal.setText(total + "");
     }
+
     public void clickGeneral(View view){
         //Recoger el valor de la caka de texto Completo
         String nombreCompleto = etNombre.getText().toString();
